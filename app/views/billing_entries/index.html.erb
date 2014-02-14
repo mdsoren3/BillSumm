@@ -1,0 +1,31 @@
+<h1>Listing billing_entries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Timebilled</th>
+      <th>Expensesbilled</th>
+      <th>Client</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @billing_entries.each do |billing_entry| %>
+      <tr>
+        <td><%= billing_entry.timeBilled %></td>
+        <td><%= billing_entry.expensesBilled %></td>
+        <td><%= billing_entry.client_id %></td>
+        <td><%= link_to 'Show', billing_entry %></td>
+        <td><%= link_to 'Edit', edit_billing_entry_path(billing_entry) %></td>
+        <td><%= link_to 'Destroy', billing_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Billing entry', new_billing_entry_path %>

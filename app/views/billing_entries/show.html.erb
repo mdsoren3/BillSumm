@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Timebilled:</strong>
+  <%= @billing_entry.timeBilled %>
+</p>
+
+<p>
+  <strong>Expensesbilled:</strong>
+  <%= @billing_entry.expensesBilled %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @billing_entry.client_id %>
+</p>
+
+<%= link_to 'Edit', edit_billing_entry_path(@billing_entry) %> |
+<%= link_to 'Back', billing_entries_path %>
