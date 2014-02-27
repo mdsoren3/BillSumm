@@ -4,12 +4,11 @@ BillSumm::Application.routes.draw do
   get "static_pages/entry"
   get "static_pages/help"
   
-  resources :ar_transactions
-
-  resources :trust_transactions
-
   resources :billing_entries
   resources :clients
+  resources :ar_transactions
+  resources :trust_transactions
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
