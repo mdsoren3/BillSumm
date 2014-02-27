@@ -1,0 +1,33 @@
+<%= form_for(@trust_transaction) do |f| %>
+  <% if @trust_transaction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trust_transaction.errors.count, "error") %> prohibited this trust_transaction from being saved:</h2>
+
+      <ul>
+      <% @trust_transaction.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.text_field :date %>
+  </div>
+  <div class="field">
+    <%= f.label :transactionAmount %><br>
+    <%= f.text_field :transactionAmount %>
+  </div>
+  <div class="field">
+    <%= f.label :transactionType %><br>
+    <%= f.text_field :transactionType %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br>
+    <%= f.text_field :note %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @trust_transaction.date %>
+</p>
+
+<p>
+  <strong>Transactionamount:</strong>
+  <%= @trust_transaction.transactionAmount %>
+</p>
+
+<p>
+  <strong>Transactiontype:</strong>
+  <%= @trust_transaction.transactionType %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @trust_transaction.note %>
+</p>
+
+<%= link_to 'Edit', edit_trust_transaction_path(@trust_transaction) %> |
+<%= link_to 'Back', trust_transactions_path %>

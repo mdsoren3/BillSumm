@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @ar_transaction.date %>
+</p>
+
+<p>
+  <strong>Transactionamount:</strong>
+  <%= @ar_transaction.transactionAmount %>
+</p>
+
+<p>
+  <strong>Transactiontype:</strong>
+  <%= @ar_transaction.transactionType %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @ar_transaction.note %>
+</p>
+
+<%= link_to 'Edit', edit_ar_transaction_path(@ar_transaction) %> |
+<%= link_to 'Back', ar_transactions_path %>

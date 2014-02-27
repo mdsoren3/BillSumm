@@ -1,0 +1,2 @@
+module TrustTransactionsHelper
+end

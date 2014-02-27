@@ -1,5 +1,13 @@
 BillSumm::Application.routes.draw do
   
+  get "static_pages/home"
+  get "static_pages/entry"
+  get "static_pages/help"
+  
+  resources :ar_transactions
+
+  resources :trust_transactions
+
   resources :billing_entries
   resources :clients
 

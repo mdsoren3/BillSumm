@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140214171524) do
+ActiveRecord::Schema.define(version: 20140218215024) do
+
+  create_table "ar_transactions", force: true do |t|
+    t.string   "date"
+    t.decimal  "transactionAmount"
+    t.string   "transactionType"
+    t.string   "note"
+    t.integer  "billing_entry_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "applied"
+  end
 
   create_table "billing_entries", force: true do |t|
     t.decimal  "timeBilled"
@@ -26,6 +37,17 @@ ActiveRecord::Schema.define(version: 20140214171524) do
     t.string   "firstname"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "trust_transactions", force: true do |t|
+    t.string   "date"
+    t.decimal  "transactionAmount"
+    t.string   "transactionType"
+    t.string   "note"
+    t.integer  "billing_entry_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "applied"
   end
 
 end
